@@ -1,0 +1,85 @@
+{{!-- evento/index.handlebars --}}
+
+{{!-- Seção de conteúdo da página --}}
+<div class="container mt-4">
+    <h1 class="mb-4">Cadastro de Eventos</h1>
+    <div class="row mb-3">
+        <div class="col-md-10 mb-3">
+            <form action="../eventosSearch/" method="post" class="d-flex" id="searchForm">
+                <!-- Define a ação e o método POST e utiliza display flex para alinhar o botão e a input -->
+                <div class="input-group">
+                    <input type="text" class="form-control" name="valorPesquisa" id="valorPesquisa"
+                        placeholder="Pesquisar...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i> Pesquisar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2 d-flex justify-content-end mb-3">
+            <!-- Botão Novo -->
+            <a href="../eventosCreate/" class="btn btn-success"><i class="bi bi-plus-circle"></i> Novo</a>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Data Evento</th>
+                    <th>Título</th>
+                    <th>Local</th>
+                    <th>Hora</th>
+                    <th>Resumo</th>
+                    <th class="text-center">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each eventos}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{formatDate data_evento}}</td>
+                    <td>{{titulo}}</td>
+                    <td>{{local}}</td>
+                    <td>{{hora_evento}}</td>
+                    <td>{{resumo}}</td>
+                    <td class="text-center">
+                            <!-- Link de Edição -->
+                            <a class="btn btn-secondary mt-1" href="../eventos/{{id}}" title="Editar"><i class="bi bi-pencil"></i></a>
+
+                            <!-- Link de Exclusão - Botão para acionar o modal -->
+                            <button class="btn btn-danger mt-1" data-bs-toggle="modal"
+                                data-bs-target="#confirmDeleteModal{{id}}" title="Excluir"><i class="bi bi-trash3"></i></button>
+                    </td>
+                </tr>
+                 <!-- Modal de Confirmação de Exclusão -->
+
+                <div class="modal fade" id="confirmDeleteModal{{id}}" tabindex="-1"
+                    aria-labelledby="confirmDeleteModalLabel{{id}}" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="confirmDeleteModalLabel{{id}}">Exclusão</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Tem certeza que deseja excluir o evento: <strong>{{titulo}}</strong>?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancelar</button>
+                                <!-- Botão de Confirmação - Chama a função JavaScript para excluir -->
+                                <button type="button" class="btn btn-danger"
+                                    onclick="confirmDeleteEvento({{id}})"><i class="bi bi-check-circle"></i> Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Scripts do formulário evento -->
+<script src="../js/eventoScripts.js"></script>

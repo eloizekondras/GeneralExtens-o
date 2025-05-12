@@ -1,0 +1,36 @@
+{{!-- edit.handlebars --}}
+
+{{!-- Seção de conteúdo da página --}}
+<div class="container mt-4 w-80">
+    <h1 class="mb-4">Editar Notícia</h1>
+    <form id="editNoticiaForm" enctype="multipart/form-data" method="post">
+        <div class="form-group mb-3">
+            <label for="editTitulo">Título</label>
+            <input type="text" class="form-control" id="editTitulo" name="titulo" value="{{noticia.titulo}}" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="editResumo">Resumo</label>
+            <input type="text" class="form-control" id="editResumo" name="resumo" value="{{noticia.resumo}}" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="editConteudo">Conteúdo</label>
+            <textarea class="form-control" id="editConteudo" name="conteudo" rows="10" required>{{noticia.conteudo}}</textarea>
+        </div>
+        <div class="form-group mb-3">
+            <label for="editImagemPrincipal">Imagem Principal</label>
+            <input type="file" class="form-control-file" id="editImagemPrincipal" name="imagem_principal" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="editImagensInternas">Imagens Internas</label>
+            <input type="file" class="form-control-file" id="editImagensInternas" name="imagens_internas" multiple>
+        </div>
+        <!-- Campo oculto para armazenar o ID do noticia -->
+        <input type="hidden" id="editNoticiaId" name="id" value="{{noticia.id}}">
+        <a  href="../noticias/" class="btn btn-secondary" id="cancelEditNoticia"><i class="bi bi-x-circle"></i> Cancelar</a>
+        <button  type="button" class="btn btn-primary" id="saveEditNoticia" onclick="UpdateNoticiaClick(event)"><i class="bi bi-check-circle"></i> Salvar</button>
+    </form>
+</div>
+
+
+<!-- Scripts do formulário noticia -->
+<script src="../js/noticiaScripts.js"></script> 

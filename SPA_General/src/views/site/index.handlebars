@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>GENERAL OSÓRIO</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--Css personalizado-->
+    <link rel="stylesheet" href="../css/site_styles.css">
+
+    <link rel="shortcut icon" href="../img/favicon.png">
+
+
+
+</head>
+
+<body>
+    <header id="home">
+        <!--Menu-->
+        <nav class="navbar navbar-expand-md bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="../img/favicon.jpg" width="95px" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#institucional">Institucional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#noticias-eventos">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#noticias-eventos">Eventos</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#localizacao">Localização</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                    <a class="btn btn-primary ms-md-3" href="#" role="button">Matricule-se</a>
+                </div>
+            </div>
+        </nav>
+        <!--Carousel-->
+        <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                {{#each banners}}
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="{{@index}}" 
+                {{#if active}}
+                class="active" aria-current="true" 
+                {{/if}}
+
+                aria-label="Slide{{ordem}}"></button>
+                {{/each}}
+               
+            </div>
+            <div class="carousel-inner">
+                {{#each banners}}
+                {{#if active}}
+                    <div class="carousel-item active" data-bs-interval="3000">
+                {{else}}
+                    <div class="carousel-item" data-bs-interval="3000">
+                {{/if}}
+                    <img src="http://localhost:3000/img/banners/{{imagem}}" class="d-block w-100">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>{{titulo}}</h5>
+                        <p>{{descricao}}</p>
+                        <a class="btn btn-primary azul" href="{{link}}" role="button">Saiba Mais</a>
+                    </div>
+                </div>
+                {{/each}}
+                
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </header>
+    
+    </section>
+    <!--Institucional-->
+    <section id="institucional">
+        <div class="container border-bottom pb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h4>Bem vindo </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="#"><img src="../img/jardim1.jpg" alt="" width="100%"></a>
+                </div>
+                <div class="col-md-5">
+                    <p>
+                        No início do século passado, entre os anos de 1910 e 1940, Três Barras abrigou a maior serraria da América do Sul: a madeireira Lumber. Com o crescimento da comunidade local, impulsionado principalmente pelos trabalhadores da empresa, surgiu a necessidade de construir uma nova escola para atender às crianças da região.
+                    </p>
+                    <p>
+                        Antes disso, existiam apenas algumas escolas particulares que ensinavam em língua polonesa, além da pequena escola isolada “João Pessoa”, que funcionava no mesmo local onde nossa escola está hoje.
+
+Foi assim que, no dia 16 de março de 1939, foi oficialmente inaugurado o Grupo Escolar General Osório, tendo como seu primeiro diretor o senhor Júlio Cantizano.
+                    </p>
+                    <p>
+                        Ao longo de seus mais de 75 anos de história, a escola já passou por diversas gestões e atualmente está sob a liderança da diretora Janaína dos Santos Bueno, nossa 19ª gestora.
+                    </p>
+                    <p>
+                       Em 2011, com o objetivo de valorizar e preservar a identidade do colégio — o mais antigo estabelecimento escolar do município —, foi realizado um concurso para a criação de um logotipo. O desenho vencedor foi da aluna Joicielen Küne, que hoje representa com orgulho a nossa escola.
+                    </p>
+                    <a href="#" class="btn btn-primary azul">Conheça melhor nossa escola</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Notícias e eventos-->
+    <section id="noticias-eventos" class="mt-2 mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8" id="noticias">
+                    <h4>Notícias Recentes</h4>
+                    {{#each noticias}}
+                    <hr>
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="http://localhost:3000/img/noticias/{{imagem_principal}}" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">{{titulo}}
+                                        </h5>
+                                    </a>
+                                    <p class="card-text">{{resumo}}</p>
+                                    <p class="card-text"><small class="text-muted">Publicado em {{formatDate updatedAt}}</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                    
+                </div>
+                <div class="col-md-4" id="eventos">
+                    <h4>Próximos Eventos</h4>
+                    {{#each eventos}}
+                    <hr>
+                    <div class="row g-0">
+                        <div class="col-3 px-2">
+                            <div class="data text-center">
+                                <div class="dia">{{formatDay data_evento}}</div>
+                                <div class="mes">{{formatMonth data_evento}}</div>
+                            </div>
+                        </div>
+                        <div class="col-9 px-2">
+                            <a href="#">
+                                <h5>{{titulo}}</h5>
+                            </a>
+                            <p><small class="text-muted"><i class="bi bi-geo-alt-fill"></i>{{local}}<br>
+                                    <i class="bi bi-clock"></i>{{hora_evento}}</small></p>
+                        </div>
+                    </div>
+                    {{/each}}
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Contato-->
+    <section id="contato">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-md-6 borda-azul p-4">
+                    <h4>Entre em contato conosco</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore quo placeat similique eveniet
+                        veniam optio laborum dignissimos voluptatem libero! Sint voluptate facilis aperiam architecto
+                        debitis natus reprehenderit modi eligendi tenetur.</p>
+                    <form id="formSendMessage">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu Nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Sua mensagem</label>
+                            <textarea class="form-control" id="mensagem" rows="3" name="mensagem"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="button" value="Enviar" class="btn btn-primary azul" id="sendMessage"> <!-- Ajustar o botão -->
+                        </div>
+
+                    </form>
+                    <div id="resposta"></div> <!--Div para receber a mensagem de resposta-->
+
+                </div>
+                <div class="col-md-6 p-4">
+                    <img src="../img/contato.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+<!-- Seção de Localização -->
+<section id="localizacao" class="localizacao">
+    <div class="container location-content">
+        <h2>Onde Estamos Localizados</h2>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3406.6485249320094!2d-50.32263325198388!3d-26.10715324751646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1731870063515!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <a href="https://maps.app.goo.gl/VAigS1LQrE6nYrH66" target="_blank" class="btn">Ver no Google Maps</a>
+    </div>
+</section>
+
+    <!--Rodapé-->
+    <footer class="mt-4 border-top pt-3 pb-3" id="rodape">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        <a href="#home">Home</a>
+                        <a href="#institucional">Institucional</a>
+                        <a href="#noticias-eventos">Notícias</a>
+                        <a href="#noticias-eventos">Eventos</a>
+                        <a href="#contato">Contato</a>
+                    </p>
+                </div>
+                <div class="col-md-4 d-flex justify-content-end">
+                    <a href="" class="btn btn-outline-light">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="" class="btn btn-outline-light ms-2">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="" class="btn btn-outline-light ms-2">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Scripts do formulário de envio de mensagem -->
+    <script src="../js/siteScripts.js"></script> 
+
+    
+</body>
+
+</html>

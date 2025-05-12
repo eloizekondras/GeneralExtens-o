@@ -1,0 +1,40 @@
+{{!-- create.handlebars --}}
+
+{{!-- Seção de conteúdo da página --}}
+<div class="container mt-4 w-80">
+    <h1 class="mb-4">Criar Evento</h1>
+    <form id="createEventoForm" enctype="multipart/form-data" method="post">
+        <div class="form-group mb-3">
+            <label for="createTitulo">Título</label>
+            <input type="text" class="form-control" id="createTitulo" name="titulo" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="createResumo">Resumo</label>
+            <input type="text" class="form-control" id="createResumo" name="resumo" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="createConteudo">Conteúdo</label>
+            <textarea class="form-control" id="createConteudo" name="conteudo" rows="10" required></textarea>
+        </div>
+        <div class="form-group mb-3">
+            <label for="createLocal">Local do Evento</label>
+            <input type="text" class="form-control" id="createLocal" name="local" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="createLocal">Data do Evento</label>
+            <input type="date" class="form-control" id="createData" name="data_evento" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="createHoraEvento">Horário</label>
+            <input type="text" class="form-control" id="createHoraEvento" name="hora_evento" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="createImagensInternas">Imagens Internas</label>
+            <input type="file" class="form-control-file" id="createImagensInternas" name="imagens_internas" multiple>
+        </div>
+        <a  href="../eventos/" class="btn btn-secondary" id="cancelCreateEvento"><i class="bi bi-x-circle"></i> Cancelar</a>
+        <button  type="button" class="btn btn-primary" id="saveCreateEvento" onclick="CreateEventoClick(event)"><i class="bi bi-check-circle"></i> Salvar</button>
+    </form>
+</div>
+<!-- Scripts do formulário evento -->
+<script src="../js/eventoScripts.js"></script> 

@@ -1,0 +1,28 @@
+{{!-- create.handlebars --}}
+
+{{!-- Seção de conteúdo da página --}}
+<div class="container mt-4 w-80">
+    <h1 class="mb-4">Criar Usuario</h1>
+    <form id="createUsuarioForm" method="post">
+        <div class="form-group mb-3">
+            <label for="createNome">Nome</label>
+            <input type="text" class="form-control" id="createNome" name="nome" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="createResumo">Email</label>
+            <input type="email" class="form-control" id="createEmail" name="email" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="createSenha">Senha</label>
+            <input type="password" class="form-control" id="createSenha" name="senha" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="createConfirmarSenha">Confirmar Senha</label>
+            <input type="password" class="form-control" id="createConfirmarSenha" name="confirmarsenha" required>
+        </div>
+        <a  href="../usuarios/" class="btn btn-secondary" id="cancelCreateUsuario"><i class="bi bi-x-circle"></i> Cancelar</a>
+        <button  type="button" class="btn btn-primary" id="saveCreateUsuario" onclick="CreateUsuarioClick(event)"><i class="bi bi-check-circle"></i> Salvar</button>
+    </form>
+</div>
+<!-- Scripts do formulário usuario -->
+<script src="../js/usuarioScripts.js"></script> 

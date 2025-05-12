@@ -1,0 +1,147 @@
+/*Variáveis*/
+:root {
+    --verde: #2c78c3;
+    --azul: #0060b1;
+    --cinza-medio: #545454;
+    --azul-escuro: #222c34;
+    --branco: #ffffff;
+    --cinza-claro: #ced4da;
+}
+
+/*Geral*/
+*{
+    font-family: 'Lato', sans-serif;
+    color: var(--cinza-medio);
+}
+
+/*Menu*/
+.nav-link {
+    color: var(--cinza-medio);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--verde);
+}
+
+#navbarNav a.btn{
+    text-transform: uppercase;
+    font-weight: 600;
+    background: var(--verde);
+    border-color: var(--verde);
+    border-radius: 0;
+}
+
+#navbarNav a.btn:hover{
+    background: var(--azul);
+    border-color: var(--azul);
+}
+
+/*Slider*/
+.carousel-control-prev-icon{
+    background-color: rgba(0, 0, 0, .5);
+    padding: 2rem 1rem;
+}
+
+.carousel-control-next-icon{
+    background-color: rgba(0, 0, 0, .5);
+    padding: 2rem 1rem;
+}
+
+.carousel-caption {
+    top: auto;
+    bottom: 4rem;
+    margin:0 auto;
+    background-color: rgba(0, 0, 0, .5);
+    width: 600px;
+}
+
+.carousel-caption h5, .carousel-caption p{
+    color: var(--branco);
+}
+
+.btn.btn-primary.azul{
+    background-color: var(--azul);
+    border-color: var(--azul);
+    border-radius: 0;
+}
+
+.btn.btn-primary.azul:hover{
+    background-color: var(--verde);
+    border-color: var(--verde);
+    border-radius: 0;
+}
+
+/*Institucional*/
+#institucional{
+    padding: 30px 30px;
+    color:var(--azul-escuro);
+}
+
+#institucional h3{
+    text-align: center;
+}
+
+/*Notícias*/
+#noticias a{
+    color: var(--azul);
+    text-decoration : none;
+}
+
+#noticias a:hover{
+    color: var(--verde);
+}
+
+/*Eventos*/
+#eventos{
+    padding-top: 1rem;
+    border : 1px solid var(--cinza-claro);
+    border-top: 8px solid var(--verde);
+}
+
+#eventos a{
+    color: var(--verde);
+    text-decoration : none;
+}
+
+#eventos a:hover{
+    color: var(--azul);
+}
+
+.data{
+    border: 3px solid var(--cinza-claro);
+}
+
+.dia{  
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h4{
+    font-weight: 600;
+}
+
+h5{
+    font-weight: 600;
+}
+
+/*Entre em contato*/
+.borda-azul{
+    border-top: 7px solid var(--azul);
+}
+
+/*Rodapé*/
+#rodape{
+    padding: 30px 30px;
+    background-color: var(--azul-escuro);
+}
+
+footer p a {
+    margin: 5px 15px;
+    color:var(--branco);
+}
+
+footer i{
+    color: var(--cinza-claro);
+}
