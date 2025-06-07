@@ -2,9 +2,9 @@
 module.exports.checkSession = function (req, res, next) {
     
     // Obtém as informações da sessão do objeto 'req' (requisição)
-    const userId = req.session.userId; // Obtém o ID do usuário da sessão
-    const token = req.session.token; // Obtém o token da sessão
-    const userMail = req.session.userMail; // Obtém o email do usuário da sessão
+    const userId = req.session.userId; 
+    const token = req.session.token; 
+    const userMail = req.session.userMail; 
 
     // Verifica se alguma das informações da sessão está ausente ou indefinida
     if (!userId || !token || !userMail) {

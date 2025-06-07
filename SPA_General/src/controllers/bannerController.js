@@ -6,12 +6,6 @@ const api = require('../config/api');
 exports.getAllBanners = async (req, res) => {
   try {
 
-    // Configurar o cabeçalho com a autorização do token
-    /*OBSERVAÇÃO: A nossa API não exige token nas operações de consulta,
-    deste modo a configuração do cabeçalho abaixo é opcional. 
-    Eu coloquei esta configuração para que se um dia vocês precisarem enviar o token para a API o código é este.
-    Inicialmente busca o token da sessão e envia no cabeçalho da requisição. 
-    */
     const token = req.session.token;
 
     const config = {

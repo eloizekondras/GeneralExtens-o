@@ -7,6 +7,9 @@ function isValidEmail(email) {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailPattern.test(email);
 }
+// Diretores
+const list = document.querySelector('.list-diretores');
+  list.innerHTML += list.innerHTML; // duplica os itens
 
 // Função para exibir mensagens de erro usando SweetAlert
 function showErrorAlert(message) {

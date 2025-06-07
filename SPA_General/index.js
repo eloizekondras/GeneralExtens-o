@@ -1,6 +1,3 @@
-//npm install express express-handlebars axios express-session session-file-store
-// index.js
-
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');

@@ -4,14 +4,12 @@ const Banner = require('../models/Banner');
 const { Op } = require('sequelize');
 
 
-
-// Método para criar um novo banner
 exports.createBanner =  async (req, res) => {
   try {
     const { titulo, descricao, link, ordem } = req.body;
-    const imagem = req.file.filename; // Obtém o nome do arquivo enviado
+    const imagem = req.file.filename; 
 
-    const banner = await Banner.create({ titulo, descricao, link, imagem, ordem }); // Defina a ordem conforme necessário
+    const banner = await Banner.create({ titulo, descricao, link, imagem, ordem }); 
     res.status(201).json(banner);
   } catch (error) {
     console.error(error);
@@ -52,13 +50,12 @@ exports.getBannerById = async (req, res) => {
 // Método para buscar banners por título
 exports.searchBannersByTitle = async (req, res) => {
   try {
-    const { titulo } = req.query; // Recupera o título da consulta da query
+    const { titulo } = req.query; 
 
-    // Realiza a busca no banco de dados com base no título
     const banners = await Banner.findAll({
       where: {
         titulo: {
-          [Op.like]: `%${titulo}%`, // Pesquisa por títulos que contenham o termo
+          [Op.like]: `%${titulo}%`, 
         },
       },
     });
@@ -75,7 +72,7 @@ exports.updateBanner = async (req, res) => {
     const { id } = req.params;
     try {
       const { titulo, descricao, link, ordem } = req.body;
-      const imagem = req.file.filename; // Obtém o nome do arquivo enviado
+      const imagem = req.file.filename;
   
       const [updated] = await Banner.update({ titulo, descricao, link, imagem, ordem }, {
         where: { id },
