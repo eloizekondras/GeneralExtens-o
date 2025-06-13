@@ -9,6 +9,9 @@ const eventoRoutes = require('./src/routes/eventoRoutes');
 const usuarioRoutes = require('./src/routes/usuarioRoutes');
 const cors = require('cors');
 
+
+require('dotenv').config();
+
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));

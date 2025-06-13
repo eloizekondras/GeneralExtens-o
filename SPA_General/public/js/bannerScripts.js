@@ -1,5 +1,7 @@
 
-const url = window.location.origin + '/';
+const baseURL = process.env.NODE_ENV === 'production'
+  ? 'https://api-projeto-fw9o.onrender.com'
+  : 'http://localhost:3000/api';
 
 
 ///     FUNÇÕES DO CADASTRO DE BANNER  ///
