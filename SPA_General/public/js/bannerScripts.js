@@ -1,5 +1,5 @@
 
-const url = "http://localhost:3000/";
+const url = window.location.origin + '/';
 
 
 ///     FUNÇÕES DO CADASTRO DE BANNER  ///
